@@ -103,7 +103,7 @@ void SetCredForRequest(byte* Username, byte* Password, word ReqId){
 void MqttSendSampleIbmPublishVarWithName(byte* varname, double val ){
     char msgBF[64];
     GetAsJSONValue(msgBF,varname,val);
-    MqttQueueMsgWithCred(msgBF,"iot-2/evt/temperature/fmt/json","d:wo8faz:sconnGKP:00-04-A3-00-00-40","use-token-auth","m0ru(ULj91Qn4EhsZA","wo8faz.messaging.internetofthings.ibmcloud.com");
+    MqttQueueMsgWithCred(msgBF,"<topic>","<serverid>:<device>","use-token-auth","<key>","<serveraddr");
 }
 
 void MqttSendSampleGnatPublishMsgForTopic(byte* val,  byte* topic ){
